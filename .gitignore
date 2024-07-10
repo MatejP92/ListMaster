@@ -38,3 +38,4 @@ storage/*.key
 /.vagrant
 
 .DS_Store
+.ddev
