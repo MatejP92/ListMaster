@@ -19,7 +19,7 @@ new class extends Component
 <nav class="border-b border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div class="shrink-0 flex items-center">
-            <a href="{{ route('dashboard') }}">
+            <a href="{{ route('shopping-list') }}">
                 <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
             </a>
         </div>
@@ -69,7 +69,7 @@ new class extends Component
         </div>
         <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
             <div class="flex flex-col items-center font-medium text-lg p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
-                <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                <x-nav-link :href="route('todo-list')" :active="request()->routeIs('todo-list')">
                     {{ __('To-Do') }}
                 </x-nav-link>
                 <x-nav-link :href="route('shopping-list')" :active="request()->routeIs('shopping-list')">

@@ -4,9 +4,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome');
 
-Route::view('dashboard', 'dashboard')
+Route::view('todo-list', 'livewire.todo-list')
     ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+    ->name('todo-list');
 
 Route::view('shopping-list', 'livewire.shopping-list')
     ->middleware(['auth', 'verified'])
