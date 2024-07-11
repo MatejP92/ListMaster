@@ -11,10 +11,23 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     {{ __("Here is your shopping list") }}
                 </div>
+
+                {{-- FORM --}}
+                <div class="pb-6">
+                    <form action="" method="post">
+                        @csrf
+                        <x-input-label>test</x-input-label>
+                        <x-text-input placeholder='test' class="w-1/3"/>
+                        <x-primary-button class="ml-2">Submit</x-primary-button>
+                    </form>
+                </div>
+
+                {{-- TABLE --}}
+                <div>
+
+                </div>
             </div>
         </div>
     </div>
-
-
 
 </x-app-layout>
