@@ -22,4 +22,5 @@ export default {
         forms,
         require('flowbite/plugin')
     ],
+    darkMode: 'class',
 };
