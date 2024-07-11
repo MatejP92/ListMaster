@@ -14,12 +14,7 @@
 
                 {{-- FORM --}}
                 <div class="pb-6">
-                    <form action="" method="post">
-                        @csrf
-                        <x-input-label>test</x-input-label>
-                        <x-text-input placeholder='test' class="w-1/3"/>
-                        <x-primary-button class="ml-2">Submit</x-primary-button>
-                    </form>
+                    <livewire:create-shopping-list />
                 </div>
 
                 {{-- TABLE --}}

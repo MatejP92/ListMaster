@@ -8,7 +8,7 @@ Route::view('todo-list', 'livewire.todo-list')
     ->middleware(['auth', 'verified'])
     ->name('todo-list');
 
-Route::view('shopping-list', 'livewire.shopping-list')
+Route::view('shopping-list', 'shopping-list.shopping-list-page')
     ->middleware(['auth', 'verified'])
     ->name('shopping-list');
 
