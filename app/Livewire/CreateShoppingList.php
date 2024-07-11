@@ -2,16 +2,14 @@
 
 namespace App\Livewire;
 
+use App\Livewire\Forms\ShoppingListForm;
 use Livewire\Component;
 use App\Models\ShoppingList;
 use Livewire\Attributes\Validate;
 
 class CreateShoppingList extends Component
 {
-    #[Validate('required')]
-    public string $name = '';
-
-    public string $category = '';
+    public ShoppingListForm $form;
 
     public bool $success = false;
 
@@ -24,13 +22,8 @@ class CreateShoppingList extends Component
     {
         $this->validate();
 
-        ShoppingList::create([
-            'name' => $this->name,
-            'category' => $this->category
-        ]);
+        $this->form->save();
 
         $this->success = true;
-
-        $this->reset('name');
     }
 }

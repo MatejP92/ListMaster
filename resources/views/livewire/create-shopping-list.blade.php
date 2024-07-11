@@ -3,10 +3,10 @@
         @csrf
         <div>
             <x-input-label for="name">Name</x-input-label>
-            <x-text-input id="name" placeholder='Name' class="w-1/3" wire:model='name' />
-            <x-primary-button class="ml-2">Submit</x-primary-button>
+            <x-text-input id="name" placeholder='Name' class="w-1/3" wire:model='form.name' />
+            <x-primary-button class="ml-2">Add</x-primary-button>
         </div>
-        @error('name')
+        @error('form.name')
             <span class="mt-2 text-sm text-red-600">{{ $message }}</span>
         @enderror
     </form>
