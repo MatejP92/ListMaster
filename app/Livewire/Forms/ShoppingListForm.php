@@ -11,6 +11,7 @@ class ShoppingListForm extends Form
 {
     #[Validate('required')]
     public string $item = '';
+    public string $note = '';
     public string $category = '';
 
     public function save(): void
@@ -18,6 +19,7 @@ class ShoppingListForm extends Form
         // Create a new shopping list entry with the current user's ID
         ShoppingList::create([
             'item' => $this->item,
+            'note' => $this->note,
             'category' => $this->category,
             'user_id' => Auth::id(),
         ]);

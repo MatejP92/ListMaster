@@ -14,6 +14,7 @@ class ShoppingList extends Model
     protected $fillable = [
         'user_id',
         'item',
+        'note',
         'category',
         'finished',
     ];

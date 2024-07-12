@@ -35,4 +35,17 @@ class ShowShoppingList extends Component
 
         session()->flash('message', "$itemName deleted successfuly");
     }
+
+    public function finished($item): void
+    {
+        ShoppingList::findOrFail($item['id'])->update(['finished' => true]);
+        $this->mount();
+    }
+
+    public function unfinished($item): void
+    {
+        ShoppingList::findOrFail($item['id'])->update(['finished' => false]);
+        $this->mount();
+    }
+
 }
