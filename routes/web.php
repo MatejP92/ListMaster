@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'welcome');
+Route::redirect('/', '/shopping-list', 301);
 
 Route::view('todo-list', 'livewire.todo-list')
     ->middleware(['auth', 'verified'])
