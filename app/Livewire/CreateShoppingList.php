@@ -2,10 +2,9 @@
 
 namespace App\Livewire;
 
-use App\Livewire\Forms\ShoppingListForm;
+use session;
 use Livewire\Component;
-use App\Models\ShoppingList;
-use Livewire\Attributes\Validate;
+use App\Livewire\Forms\ShoppingListForm;
 
 class CreateShoppingList extends Component
 {
@@ -18,12 +17,14 @@ class CreateShoppingList extends Component
         return view('livewire.create-shopping-list');
     }
 
-    public function save(): void
+    public function save()
     {
         $this->validate();
 
         $this->form->save();
 
         $this->success = true;
+
+        return $this->redirect('/shopping-list');
     }
 }

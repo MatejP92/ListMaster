@@ -15,8 +15,9 @@ return new class extends Migration
         Schema::create('shopping_lists', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(User::class);
-            $table->string('name');
+            $table->string('item');
             $table->string('category')->nullable();
+            $table->string('note')->nullable();
             $table->boolean('finished')->default(false);
             $table->timestamps();
         });

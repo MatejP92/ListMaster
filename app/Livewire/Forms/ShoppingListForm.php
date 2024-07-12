@@ -10,17 +10,19 @@ use Livewire\Attributes\Validate;
 class ShoppingListForm extends Form
 {
     #[Validate('required')]
-    public string $name = '';
-
+    public string $item = '';
     public string $category = '';
-
-    public ?int $userId = null;
 
     public function save(): void
     {
-        $this->userId = Auth::user()->id;
-        ShoppingList::create($this->all());
+        // Create a new shopping list entry with the current user's ID
+        ShoppingList::create([
+            'item' => $this->item,
+            'category' => $this->category,
+            'user_id' => Auth::id(),
+        ]);
+
+        // Reset the form fields
         $this->reset('name', 'category');
     }
-
 }
