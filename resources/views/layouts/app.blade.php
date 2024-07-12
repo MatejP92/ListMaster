@@ -12,7 +12,7 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/app.css', 'resources/js/app.js', 'node_modules/flowbite/dist/flowbite.min.js'])
 
         <script>
             // On page load or when changing themes, best to add inline in `head` to avoid FOUC
@@ -42,6 +42,5 @@
             </main>
         </div>
 
-        <script src="/node_modules/flowbite/dist/flowbite.min.js"></script>
     </body>
 </html>
