@@ -48,4 +48,11 @@ class ShowShoppingList extends Component
         $this->mount();
     }
 
+    public function clearList($id): void
+    {
+        ShoppingList::where('user_id', $id)->delete();
+        $this->mount();
+
+        session()->flash('message', "List has been cleared successfully");
+    }
 }

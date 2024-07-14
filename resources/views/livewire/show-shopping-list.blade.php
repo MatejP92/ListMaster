@@ -12,6 +12,11 @@
                     </div>
                 </div>
             @endif
+            <div class="flex m-3">
+                <x-secondary-button wire:click="clearList({{ Auth::id() }})" wire:confirm="Are you sure you want to clear the list?">
+                    Clear list
+                </x-secondary-button>
+            </div>
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
 {{--                    <th scope="col" class="px-2 py-3 w-1/6">--}}
