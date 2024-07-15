@@ -17,10 +17,10 @@ new class extends Component
 }; ?>
 
 <nav class="border-b border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
         <div class="shrink-0 flex items-center">
             <a href="{{ route('shopping-list') }}">
-                <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
+                <x-application-logo class="block h-14 w-auto fill-current text-gray-800 dark:text-gray-200" />
             </a>
         </div>
         <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse gap-2">

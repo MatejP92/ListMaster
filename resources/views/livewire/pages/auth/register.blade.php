@@ -37,7 +37,7 @@ new #[Layout('layouts.app')] class extends Component
 }; ?>
 
 <div class="min-h-screen flex flex-col items-center pt-20">
-    <x-application-logo class="h-32 w-full mb-10"></x-application-logo>
+    <x-application-logo class="h-32 w-auto mb-10"></x-application-logo>
     <div class="w-full sm:max-w-md mt-1 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
         <h1 class="pb-5 font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight text-center">
             {{ __('Register') }}

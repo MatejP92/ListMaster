@@ -37,7 +37,7 @@ new #[Layout('layouts.app')] class extends Component
 }; ?>
 
 <div class="min-h-screen flex flex-col items-center pt-20">
-    <x-application-logo class="h-32 w-full mb-10"></x-application-logo>
+    <x-application-logo class="h-32 w-auto mb-10"></x-application-logo>
     <div class="w-full sm:max-w-md mt-1 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
         <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
             {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
