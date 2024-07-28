@@ -4,9 +4,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::redirect('/', '/shopping-list', 301);
 
-Route::view('todo-list', 'livewire.todo-list')
+Route::view('tasks', 'livewire.tasks')
     ->middleware(['auth', 'verified'])
-    ->name('todo-list');
+    ->name('tasks');
 
 Route::view('shopping-list', 'shopping-list.shopping-list-page')
     ->middleware(['auth', 'verified'])

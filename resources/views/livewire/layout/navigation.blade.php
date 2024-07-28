@@ -80,8 +80,8 @@ new class extends Component
         </div>
         <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
             <div class="flex flex-col items-center font-medium text-lg p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
-                <x-nav-link :href="route('todo-list')" :active="request()->routeIs('todo-list')">
-                    {{ __('To-Do') }}
+                <x-nav-link :href="route('tasks')" :active="request()->routeIs('tasks')">
+                    {{ __('Tasks') }}
                 </x-nav-link>
                 <x-nav-link :href="route('shopping-list')" :active="request()->routeIs('shopping-list')">
                     {{ __('Shopping List') }}
