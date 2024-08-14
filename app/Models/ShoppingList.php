@@ -23,4 +23,9 @@ class ShoppingList extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function tab(): BelongsTo
+    {
+        return $this->belongsTo(ShoppingListTab::class);
+    }
 }

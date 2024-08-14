@@ -51,4 +51,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(ShoppingList::class);
     }
+
+    public function shoppingListTabs(): HasMany
+    {
+        return $this->hasMany(ShoppingListTab::class);
+    }
 }

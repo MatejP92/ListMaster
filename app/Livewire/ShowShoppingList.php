@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\ShoppingListTab;
 use Livewire\Component;
 use App\Models\ShoppingList;
 use Illuminate\Support\Facades\Auth;
@@ -11,12 +12,15 @@ class ShowShoppingList extends Component
 {
     public Collection $shoppingList;
 
+    public Collection $shoppingListTab;
+
     protected $listeners =['refreshTable' => '$refresh'];
 
     public function render()
     {
         return view('livewire.show-shopping-list', [
-            'shoppingLists' => $this->shoppingList
+            'shoppingLists' => $this->shoppingList,
+            'shoppingListTabs' => $this->shoppingListTab,
         ]);
     }
 
@@ -24,6 +28,7 @@ class ShowShoppingList extends Component
     {
         $userId = Auth::id();
         $this->shoppingList = ShoppingList::where('user_id', $userId)->get();
+        $this->shoppingListTab = ShoppingListTab::where('user_id', $userId)->get();
     }
 
     public function deleteItem($item): void
